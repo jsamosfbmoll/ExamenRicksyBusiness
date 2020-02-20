@@ -221,6 +221,12 @@ public class RicksyBusiness {
          */
 
          // tu código aquí
+        
+        /**
+         * Sé que podría haber hecho un for en vez
+         * de repetir tanto código, pero así me ayuda
+         * a entender lo que he hecho
+         */
         System.out.println();
         System.out.println("Menus:");
         RickMenu menu = new RickMenu(100, 10.0);
