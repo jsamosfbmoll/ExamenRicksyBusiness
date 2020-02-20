@@ -4,7 +4,7 @@ public class CreditCard {
 	
 	private final String owner;
 	private final String number;
-	private int credit = 0;
+	private double credit = 3000d;
 	private final String SYMBOL = "EZI";
 	
 	public CreditCard(String nombreOwner, String numeroTarjeta) {
