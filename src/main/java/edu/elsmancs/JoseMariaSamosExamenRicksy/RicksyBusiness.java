@@ -221,6 +221,38 @@ public class RicksyBusiness {
          */
 
          // tu código aquí
+        System.out.println();
+        System.out.println("Menus:");
+        RickMenu menu = new RickMenu(100, 10.0);
+        System.out.println(menu);
+        
+        Receptivo receptivoDos = new Receptivo();
+        UfosPark ufos = new UfosPark();
+        CrystalExpender cristal = new CrystalExpender(10, 50.0);
+        receptivoDos.registra(ufos);
+        receptivoDos.registra(menu);
+        receptivoDos.registra(cristal);
+        
+        CreditCard birdpearsonDos = new CreditCard("Birdpearson", "1111111111111111");
+        CreditCard abradolphDos = new CreditCard("abradolph", "1111111111111112");
+        CreditCard squanchyDos = new CreditCard("squanchy", "1111111111111113");
+        CreditCard mortyDos = new CreditCard("morty", "1111111111111114");
+        CreditCard gearHeadDos = new CreditCard("gearHead", "1111111111111115");
+        receptivoDos.dispatch(birdpearsonDos);
+        mostrarReserva(birdpearsonDos, cristal, ufos);
+        System.out.println("Stock menu: " + menu.stock());
+        receptivoDos.dispatch(abradolphDos);
+        mostrarReserva(abradolphDos, cristal, ufos);
+        System.out.println("Stock menu: " + menu.stock());
+        receptivoDos.dispatch(squanchyDos);
+        mostrarReserva(squanchyDos, cristal, ufos);
+        System.out.println("Stock menu: " + menu.stock());
+        receptivoDos.dispatch(mortyDos);
+        mostrarReserva(mortyDos, cristal, ufos);
+        System.out.println("Stock menu: " + menu.stock());
+        receptivoDos.dispatch(gearHeadDos);
+        mostrarReserva(gearHeadDos, cristal, ufos);
+        System.out.println("Stock menu: " + menu.stock());
     }
 
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
