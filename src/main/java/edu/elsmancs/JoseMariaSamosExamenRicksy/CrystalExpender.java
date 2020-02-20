@@ -11,11 +11,20 @@ public class CrystalExpender implements GuestDispatcher {
 	}
 	
 	public void dispatch(CreditCard tarjetaDeCredito) {
-		
+		String numeroTarjeta = tarjetaDeCredito.number();
+		if (stock > 0 && tarjetaDeCredito.pay(itemCost)) {
+			stock -= 1;
+		}
 	}
 	
 	public int stock() {
 		return stock;
+	}
+	
+	@Override
+	public String toString() {
+		String texto = "stock: " + stock + "\ncost: " + itemCost;
+		return texto;
 	}
 
 }
