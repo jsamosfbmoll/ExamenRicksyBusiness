@@ -9,4 +9,10 @@ public class Receptivo {
 	public void registra(GuestDispatcher dispatcher) {
 		dispatchers.add(dispatcher);
 	}
+	
+	public void dispatch(CreditCard tarjetaDeCredito) {
+		for (GuestDispatcher dispatcher : dispatchers) {
+			dispatcher.dispatch(tarjetaDeCredito);
+		}
+	}
 }
