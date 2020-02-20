@@ -20,8 +20,13 @@ public class CreditCard {
 		return this.credit;
 	}
 	
-	public void pay(double ezi) {
-		credit -= ezi;
+	public boolean pay(double ezi) {
+		if (ezi > credit) {
+			return false;
+		} else {
+			credit -= ezi;
+			return true;
+		}
 	}
 	
 	@Override
