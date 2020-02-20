@@ -20,6 +20,10 @@ public class CreditCard {
 		return this.credit;
 	}
 	
+	public void pay(double ezi) {
+		credit -= ezi;
+	}
+	
 	@Override
 	public String toString() {
 		String texto = "Owner: " + owner + "\nnumber: " + number
