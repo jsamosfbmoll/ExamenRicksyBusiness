@@ -13,5 +13,9 @@ public class CrystalExpender implements GuestDispatcher {
 	public void dispatch(CreditCard tarjetaDeCredito) {
 		
 	}
+	
+	public int stock() {
+		return stock;
+	}
 
 }
