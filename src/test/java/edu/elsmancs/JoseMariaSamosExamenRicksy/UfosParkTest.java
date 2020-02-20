@@ -2,6 +2,7 @@ package edu.elsmancs.JoseMariaSamosExamenRicksy;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class UfosParkTest {
@@ -9,12 +10,21 @@ public class UfosParkTest {
     UfosPark ufos = null;
     String[] ovnis = { "unx", "dox", "trex" };
 
+    @Before
+    public void setup() {
+    	ufos = new UfosPark();
+		for (String ovni : ovnis) {
+			ufos.add(ovni);
+        }
+    }
+    
     /**
      * Testea el metodo añadir ovni 
      * a la flota de ufos
      */
     @Test
     public void addUfoTest() {
+    	ufos.add("ovniInventado");
     }
 
     /**
@@ -25,6 +35,8 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchTest() {
+    	ufos.dispatch(new CreditCard("Jose", "1234432156788765"));
+    	assertEquals("unx", ufos.getUfoOf("1234432156788765"));
     }
 
     /**
@@ -34,6 +46,10 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchNoCreditTest() {
+    	CreditCard tarjeta = new CreditCard("Jose", "4321432156788765");
+    	tarjeta.pay("3000.0");
+    	ufos.dispatch(tarjeta);
+    	assertEquals(null, ufos.getUfoOf("4321432156788765"));
     }
 
     /**
@@ -43,6 +59,8 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchUfoAlreadyReservedTest() {
+    	ufos.dispatch(new CreditCard("Jose", "1234432156788765"));
+    	assertEquals("unx", ufos.getUfoOf("1234432156788765"));
     }
 
     /**
@@ -52,6 +70,11 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchNoUfoAvaliableTest() {
+    	CreditCard tarjeta = new CreditCard("Jose", "8765567843211234");
+    	CreditCard tarjetaDos = new CreditCard("Jose", "0098765434566543");
+    	ufos.dispatch(tarjeta);
+    	ufos.dispatch(tarjetaDos);
+    	assertEquals(null, ufos.getUfoOf("1234567887654321"));
     }
 
     /**
@@ -59,5 +82,6 @@ public class UfosParkTest {
      */
     @Test
     public void getUfoOfTest() {
+    	assertEquals("unx", ufos.getUfoOf("1234432156788765"));
     }
 }
