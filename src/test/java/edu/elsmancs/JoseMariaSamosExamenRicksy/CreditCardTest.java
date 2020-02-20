@@ -41,5 +41,19 @@ public class CreditCardTest {
 		tarjeta.pay(1000.0);
 		assertEquals(2000.0, tarjeta.credit(), 0);
 	}
+	
+	@Test
+	public void pagarDevuelveTrue() {
+		CreditCard tarjeta = new CreditCard("Jose", "1234432112344321");
+		assertEquals(true, tarjeta.pay(2000.0));
+		assertEquals(1000.0, tarjeta.credit(), 0);
+	}
+	
+	@Test
+	public void pagarDevuelveFalse() {
+		CreditCard tarjeta = new CreditCard("Jose", "1111222233334444");
+		assertEquals(false, tarjeta.pay(5000.0));
+		assertEquals(3000.0, tarjeta.credit(), 0);
+	}
 
 }
