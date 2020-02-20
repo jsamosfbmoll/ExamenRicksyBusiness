@@ -16,6 +16,10 @@ public class RickMenu implements GuestDispatcher {
 		}
 	}
 	
+	public int stock() {
+		return stock;
+	}
+	
 	@Override
 	public String toString() {
 		String texto = "stock: " + stock + "\ncost: " + itemCost;
