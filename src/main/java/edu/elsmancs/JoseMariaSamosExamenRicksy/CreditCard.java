@@ -12,6 +12,14 @@ public class CreditCard {
 		this.number = numeroTarjeta;
 	}
 	
+	public String number() {
+		return this.number;
+	}
+	
+	public double credit() {
+		return this.credit;
+	}
+	
 	@Override
 	public String toString() {
 		String texto = "Owner: " + owner + "\nnumber: " + number
