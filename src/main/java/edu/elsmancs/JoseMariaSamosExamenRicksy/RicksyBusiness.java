@@ -51,7 +51,7 @@ public class RicksyBusiness {
          * de los que estén libres.
          * El coste del ovni es de 500 EZIs.
          */
-
+/*
         UfosPark ufosPark = new UfosPark();
 
         // Da de alta en la flota de ovnis 2 UFOS.
@@ -131,7 +131,7 @@ public class RicksyBusiness {
          * Indica el numero de unidades y el coste de cada
          * uno de ellos, que es de 50 EZIs
          */
-
+/*
         CrystalExpender packExpender = new CrystalExpender(3, 50);
 
         // Muestra el total de packs y su precio unidad
@@ -164,7 +164,7 @@ public class RicksyBusiness {
          * y registra (añade) los componentes UfosPark
          * y CrystalDispatcher al receptivo
          */
-
+/*
         Receptivo receptivo = new Receptivo();
         receptivo.registra(packExpender);
         receptivo.registra(ufosPark);
