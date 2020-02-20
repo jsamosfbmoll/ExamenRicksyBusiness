@@ -11,6 +11,13 @@ public class CreditCard {
 		this.owner = nombreOwner;
 		this.number = numeroTarjeta;
 	}
+	
+	@Override
+	public String toString() {
+		String texto = "Owner: " + owner + "\nnumber: " + number
+				+ "\ncredit: " + credit + " " + SYMBOL;
+		return texto;
+	}
 }
 
 	
