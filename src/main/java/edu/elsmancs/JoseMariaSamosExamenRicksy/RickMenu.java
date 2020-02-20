@@ -11,7 +11,15 @@ public class RickMenu implements GuestDispatcher {
 	}
 	
 	public void dispatch(CreditCard tarjetaDeCredito) {
-		
+		if (stock > 0 && tarjetaDeCredito.pay(itemCost)) {
+			stock -= 1;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		String texto = "stock: " + stock + "\ncost: " + itemCost;
+		return texto;
 	}
 
 }
