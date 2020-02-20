@@ -228,7 +228,8 @@ public class RicksyBusiness {
          * a entender lo que he hecho
          */
         System.out.println();
-        System.out.println("Menus:");
+        System.out.println("Pedidos de RickMenus:");
+        System.out.println("=====================");
         RickMenu menu = new RickMenu(100, 10.0);
         System.out.println(menu);
         
@@ -239,25 +240,20 @@ public class RicksyBusiness {
         receptivoDos.registra(menu);
         receptivoDos.registra(cristal);
         
-        CreditCard birdpearsonDos = new CreditCard("Birdpearson", "1111111111111111");
-        CreditCard abradolphDos = new CreditCard("abradolph", "1111111111111112");
-        CreditCard squanchyDos = new CreditCard("squanchy", "1111111111111113");
-        CreditCard mortyDos = new CreditCard("morty", "1111111111111114");
-        CreditCard gearHeadDos = new CreditCard("gearHead", "1111111111111115");
-        receptivoDos.dispatch(birdpearsonDos);
-        mostrarReserva(birdpearsonDos, cristal, ufos);
+        receptivoDos.dispatch(birdpearson);
+        mostrarReserva(birdpearson, cristal, ufos);
         System.out.println("Stock menu: " + menu.stock());
-        receptivoDos.dispatch(abradolphDos);
-        mostrarReserva(abradolphDos, cristal, ufos);
+        receptivoDos.dispatch(abradolph);
+        mostrarReserva(abradolph, cristal, ufos);
         System.out.println("Stock menu: " + menu.stock());
-        receptivoDos.dispatch(squanchyDos);
-        mostrarReserva(squanchyDos, cristal, ufos);
+        receptivoDos.dispatch(squanchy);
+        mostrarReserva(squanchy, cristal, ufos);
         System.out.println("Stock menu: " + menu.stock());
-        receptivoDos.dispatch(mortyDos);
-        mostrarReserva(mortyDos, cristal, ufos);
+        receptivoDos.dispatch(morty);
+        mostrarReserva(morty, cristal, ufos);
         System.out.println("Stock menu: " + menu.stock());
-        receptivoDos.dispatch(gearHeadDos);
-        mostrarReserva(gearHeadDos, cristal, ufos);
+        receptivoDos.dispatch(gearHead);
+        mostrarReserva(gearHead, cristal, ufos);
         System.out.println("Stock menu: " + menu.stock());
     }
 
