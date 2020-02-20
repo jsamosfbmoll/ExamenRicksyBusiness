@@ -48,4 +48,9 @@ public class UfosPark implements GuestDispatcher {
 	public void add(String ovni) {
 		flota.put(ovni, null);
 	}
+	
+	@Override
+	public String toString() {
+		return flota.keySet().toString();
+	}
 }
