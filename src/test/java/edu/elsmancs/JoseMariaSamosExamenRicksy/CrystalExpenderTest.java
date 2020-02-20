@@ -21,7 +21,7 @@ public class CrystalExpenderTest {
 	}
 	
 	@Test
-	public void toString() {
+	public void toStringTest() {
 		assertEquals("stock: 5\ncost: 50.0", cristal.toString());
 	}
 	
