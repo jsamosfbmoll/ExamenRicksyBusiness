@@ -11,7 +11,6 @@ public class CrystalExpender implements GuestDispatcher {
 	}
 	
 	public void dispatch(CreditCard tarjetaDeCredito) {
-		String numeroTarjeta = tarjetaDeCredito.number();
 		if (stock > 0 && tarjetaDeCredito.pay(itemCost)) {
 			stock -= 1;
 		}
