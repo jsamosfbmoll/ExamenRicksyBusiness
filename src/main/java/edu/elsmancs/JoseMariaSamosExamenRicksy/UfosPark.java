@@ -19,6 +19,7 @@ public class UfosPark implements GuestDispatcher {
 		for (String ovni : flota.keySet()) {
 			if (flota.get(ovni) == null) {
 				flota.put(ovni, numeroTarjeta);
+				break; //Break para que deje de asignar ovnis
 			}
 		}
 	}
