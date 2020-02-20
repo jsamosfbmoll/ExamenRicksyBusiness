@@ -36,8 +36,11 @@ public class UfosParkTest {
     @Test
     public void dispatchTest() {
     	CreditCard tarjeta = new CreditCard("Jose", "1234432156788765");
+    	CreditCard tarjetaDos = new CreditCard("David", "1234432112344321");
     	ufos.dispatch(tarjeta);
+    	ufos.dispatch(tarjetaDos);
     	assertEquals("trex", ufos.getUfoOf("1234432156788765"));
+    	assertEquals("dox", ufos.getUfoOf("1234432112344321"));
     }
 
     /**
