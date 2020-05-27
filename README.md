@@ -12,4 +12,8 @@ En el examen se proporciona solo clase con el método main (también el diagrama
 
 El proyecto tiene una documentación en javadoc para la asignatura de Entornos, podrás encontrar esta documentación exportada a html [aquí](doc/index.html).
 
+## Documentación en Guthub Pages
+
+[Enlace](https://jsamosfbmoll.github.io/documentacionRicksyBusiness/)
+
 ###### Jose María Samos Diago
